@@ -1,10 +1,11 @@
 {
-  "name": "vue-youtube-player",
+  "name": "@kapien/youtube-player",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name youtube-player ./src/components/YoutubePlayer.vue",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -25,5 +26,13 @@
     "stylus-loader": "^3.0.2",
     "ts-jest": "^23.0.0",
     "vue-template-compiler": "^2.5.16"
-  }
+  },
+  "main": "dist/youtube-player.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ]
 }
